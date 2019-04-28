@@ -1,0 +1,10 @@
+Package: com.shepgoba.notifyheaders
+Name: NotifyHeaders
+Depends: mobilesubstrate, firmware (>= 11.0), org.thebigboss.libcolorpicker, net.limneos.libbulletin
+Architecture: iphoneos-arm
+Description: Get iOS 10 Notification Headers on iOS 12!
+Maintainer: shepgoba
+Author: shepgoba
+Section: Tweaks
+Version: 1.0.1
+Installed-Size: 292
