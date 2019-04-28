@@ -1,5 +1,6 @@
 #import "Tweak.h"
 #import <libcolorpicker.h>
+#import <objc/runtime.h>
 
 static UIColor *headercolor, *textcolor;
 
