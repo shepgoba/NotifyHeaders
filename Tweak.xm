@@ -4,7 +4,8 @@
 static UIColor *headercolor, *textcolor;
 
 
-static void sendNotification() {
+static void sendNotification() 
+{
     // Thanks to d4ni (NotificationTester)
     // https://git.d4ni.nl/daniwinter/NotificationTester/
     [[objc_getClass("JBBulletinManager") sharedInstance] showBulletinWithTitle:@"NotifyHeaders"
@@ -14,7 +15,7 @@ static void sendNotification() {
 
 static void initPrefs()
 {
-   NSString *prefsPath = @"/User/Library/Preferences/com.shepgoba.notifyheaders.plist";
+    NSString *prefsPath = @"/User/Library/Preferences/com.shepgoba.notifyheaders.plist";
     NSString *prefsDefault = @"/Library/PreferenceBundles/notifyheaders.bundle/defaults.plist";
     
 
@@ -76,7 +77,6 @@ static void updatePrefs()
 %ctor 
 {
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)sendNotification, CFSTR("com.shepgoba.notifyheaders/notificationBanner"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-    
     
     initPrefs();
     updatePrefs();
